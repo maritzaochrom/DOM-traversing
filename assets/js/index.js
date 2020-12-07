@@ -35,7 +35,7 @@ Array.from(labels).forEach((label) => {
     } else {
         label.style.borderBottom = "2px solid red"; 
     }
-})
+});
 
 
 
