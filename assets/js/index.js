@@ -32,7 +32,7 @@ Array.from(labels).forEach((label) => {
     if(label.matches(".mild")) {
         label.style.borderBottom = "2px solid yellow";
     } else if(label.matches(".intense")) {
-        label.style.borderBottom = "2px solid onrage";
+        label.style.borderBottom = "2px solid orange";
     } else {
         label.style.borderBottom = "2px solid red"; 
     }
