@@ -2,9 +2,10 @@
 // * Select the `header` that is the closest to the first `h1` heading. Give the `header` a solid border of 5px. 
 //![alt text](assets/images/header.png "Header")
 
-let getH1 = document.querySelector(".heading")
+
+let getH1 = document.querySelector("h1");
 let closestToH1 = getH1.closest(".heading");
-closestToH1.style.border = "5px solid red";
+closestToH1.style.border = "5px solid grey";
 
 
 //TASK 2
@@ -18,21 +19,24 @@ let arr = Array.from(allPackage);
 
 if (parent) {
     arr.forEach((elem) => {
-        elem.nextElementSibling.style.border = "5px solid red"
+        elem.nextElementSibling.style.border = "2px solid red"
      });
 }
 
 
 //TASK 3
 
-arr.forEach((elem) => {
-    let lastChild = elem.nextElementSibling;
+let labels = document.getElementsByTagName("label");
+Array.from(labels).forEach((label) => {
   
-    if(lastChild.matches(".mild")) {
-        lastChild.style.border = "5px solid yellow";
+    if(label.matches(".mild")) {
+        label.style.borderBottom = "2px solid yellow";
+    } else if(label.matches(".intense")) {
+        label.style.borderBottom = "2px solid onrage";
+    } else {
+        label.style.borderBottom = "2px solid red"; 
     }
 })
-
 
 
 //TASK 4 
