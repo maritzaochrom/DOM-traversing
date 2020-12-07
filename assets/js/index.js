@@ -19,7 +19,7 @@ let arr = Array.from(allPackage);
 
 if (parent) {
     arr.forEach((elem) => {
-        elem.nextElementSibling.style.border = "2px solid red"
+        elem.previousElementSibling.style.border = "4px solid blue"
      });
 }
 
@@ -39,21 +39,30 @@ Array.from(labels).forEach((label) => {
 })
 
 
+
 //TASK 4 
 //* Add all the children of the `.nav-list` to the footer's unordered list, `.site-map`. 
 //Note: the `.nav-list` should still contain its children. ![alt text](assets/images/footer.png "Footer")
-let grandparent = document.querySelector(".nav-list");
-let parents = Array.from(grandparent.children);
- //console.log(parents);
 
-parents.forEach((elem) => { 
-  // console.log(elem);
-    let li = document.createElement("LI");
-    let text = document.createTextNode(elem.innerHTML);
-    li.appendChild(text);
-    document.querySelector(".site-map").appendChild(li) ; 
+//solution one
+// let grandparent = document.querySelector(".nav-list");
+// let parents = Array.from(grandparent.children);
+
+// parents.forEach((elem) => { 
+ 
+//     let li = document.createElement("LI");
+//     let text = document.createTextNode(elem.innerHTML);
+//     li.appendChild(text);
+//     document.querySelector(".site-map").appendChild(li) ; 
   
-});
+// });
+
+
+//another short solution 07 Dic
+let navList = document.querySelector(".nav-list");
+let footerUl = document.querySelector(".site-map");
+footerUl.innerHTML = navList.innerHTML;
+
 
 
 
