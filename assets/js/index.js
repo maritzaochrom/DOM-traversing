@@ -19,10 +19,9 @@ let arr = Array.from(allPackage);
 
 if (parent) {
     arr.forEach((elem) => {
-        elem.previousElementSibling.style.border = "4px solid blue"
+        elem.previousElementSibling.style.border = "4px solid blue";
      });
 }
-
 
 //TASK 3
 
